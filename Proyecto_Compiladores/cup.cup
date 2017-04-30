@@ -1,0 +1,11 @@
+
+parser code {:
+    scanner s;
+    Parser(scanner s){ this.s=s; }
+:}
+
+init with {: s.init(); :};
+scan with {: return s.next_token(); :};
+
+terminal ONE, ZERO, DOT;
+non terminal binary, number, decimal;
